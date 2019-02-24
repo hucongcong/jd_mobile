@@ -1,0 +1,209 @@
+@import './base.less';
+.jd_container {
+  width: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+.jd_header {
+  height: 40px;
+  width: 100%;
+  background-color: rgba(222, 24, 27, 0);
+  position: fixed;
+  max-width: 640px;
+  z-index: 999;
+  .logo {
+    width: 57px;
+    height: 21px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-position: 0 -109px;
+  }
+  .login {
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+  }
+  .search {
+    margin: 0 50px 0 75px;
+    height: 40px;
+    position: relative;
+    input {
+      width: 100%;
+      height: 30px;
+      margin-top: 5px;
+      border-radius: 15px;
+      padding-left: 30px;
+    }
+    i {
+      width: 21px;
+      height: 21px;
+      background-position: -59px -109px;
+      position: absolute;
+      top: 9px;
+      left: 7px;
+    }
+  }
+}
+
+.jd_nav {
+  background-color: #f7f7f7;
+  li {
+    float: left;
+    width: 20%;
+    padding: 10px 0;
+    img {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto;
+    }
+    p {
+      text-align: center;
+      line-height: 20px;
+      color: #000;
+    }
+  }
+}
+
+.jd_news {
+  height: 30px;
+  background-color: #fff;
+  margin: 0 10px;
+  border-radius: 5px;
+  position: relative;
+  .logo {
+    width: 82px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    img {
+      width: 73px;
+      height: 16px;
+      margin-top: 7px;
+      margin-left: 7px;
+    }
+  }
+  .info {
+    height: 30px;
+    margin: 0 40px 0 82px;
+    overflow: hidden;
+    li {
+      height: 30px;
+      line-height: 30px;
+      padding: 0 10px;
+    }
+  }
+  .more {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 30px;
+  }
+}
+
+.jd_seckill {
+  background-color: #fff;
+  margin-top: 10px;
+  .seckill_title {
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    position: relative;
+    .seckill_icon {
+      width: 22px;
+      height: 22px;
+      background-position: -83px -109px;
+      position: absolute;
+      top: 3px;
+      left: 8px;
+    }
+    .seckill_text {
+      color: #f23030;
+      letter-spacing: 2px;
+      margin-left: 20px;
+      float: left;
+    }
+    .seckill_time {
+      width: 74px;
+      height: 18px;
+      line-height: 18px;
+      float: left;
+      margin-top: 6px;
+      margin-left: 6px;
+      span {
+        float: left;
+
+        &:nth-child(odd) {
+          background-color: #000;
+          width: 18px;
+          height: 18px;
+          color: #fff;
+          border-radius: 3px;
+          text-align: center;
+        }
+        &:nth-child(even) {
+          width: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .seckill_content {
+    /*pc尽量避免让一个div有滚动条，因为滚动条太丑了，移动的滚动条比较好看*/
+    overflow: hidden;
+    ul {
+      /*暂时写死2000，真正需要使用js计算这一段的宽度*/
+      width: 2000px;
+      li {
+        float: left;
+        width: 87px;
+        a {
+          width: 87px;
+          height: 70px;
+          border-right: 1px solid #ccc;
+          display: block;
+          overflow: hidden;
+          img {
+            width: 60px;
+            height: 60px;
+            margin: 5px auto;
+          }
+        }
+        p {
+          text-align: center;
+          line-height: 20px;
+          &:first-of-type {
+            color: #f23030;
+            font-weight: 700;
+          }
+          &:last-of-type {
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+}
+
+.jd_major li {
+  float: left;
+  width: 33.33%;
+}
+
+.jd_product li a {
+  float: left;
+  width: 50%;
+}
+
+.jd_product li:first-child a {
+  width: 33.33%;
+}
