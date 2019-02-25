@@ -12,6 +12,7 @@
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="lib/swiper/css/swiper.css" />
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css" />
   </head>
   <body>
     <div class="jd_container">
@@ -25,32 +26,9 @@
         <a class="login">登录</a>
       </div>
       <!--京东banner-->
-      <div class="jd_banner swiper-container">
+      <div class="jd_banner swiper-container" id="jd_banner">
         <ul class="swiper-wrapper">
-          <li class="swiper-slide">
-            <a href="#"><img src="images/banner01.jpg" alt=""/></a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#"><img src="images/banner02.jpg" alt=""/></a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#"><img src="images/banner03.jpg" alt=""/></a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#"><img src="images/banner04.jpg" alt=""/></a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#"><img src="images/banner05.jpg" alt=""/></a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#"><img src="images/banner06.jpg" alt=""/></a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#"><img src="images/banner07.jpg" alt=""/></a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#"><img src="images/banner08.jpg" alt=""/></a>
-          </li>
+          <!-- 挖个坑 -->
         </ul>
         <!-- 小圆点 -->
         <div class="swiper-pagination"></div>
@@ -59,98 +37,34 @@
       <!--京东导航-->
       <div class="jd_nav">
         <ul class="clearfix">
-          <li>
-            <a href="#">
-              <img src="images/nav01.png" alt="" />
-              <p>京东超市</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/nav02.png" alt="" />
-              <p>全球购</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/nav03.png" alt="" />
-              <p>服装城</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/nav04.png" alt="" />
-              <p>京东生鲜</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/nav05.png" alt="" />
-              <p>京东到家</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/nav06.png" alt="" />
-              <p>充值中心</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/nav07.png" alt="" />
-              <p>京东金融</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/nav08.png" alt="" />
-              <p>领券</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/nav09.png" alt="" />
-              <p>物流查询</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/nav10.png" alt="" />
-              <p>我的关注</p>
-            </a>
-          </li>
+          <!-- 挖个坑 -->
         </ul>
       </div>
 
       <!--京东快报-->
       <div class="jd_news">
         <div class="logo"><img src="images/jd-news-tit.png" alt="" /></div>
-        <div class="info">
-          <ul>
-            <li class="one-txt-cut">
+        <div class="info swiper-container swiper-no-swiping" id="jd_news">
+          <ul class="swiper-wrapper">
+            <li class="one-txt-cut swiper-slide">
               <a href="#"
                 >智大前端黑马传xx期，毕业薪资1W5,智大前端黑马传22期，毕业薪资1W5</a
               >
             </li>
-            <li class="one-txt-cut">
+            <li class="one-txt-cut swiper-slide">
               <a href="#">智大前端黑马传xx期，毕业薪资2W5</a>
             </li>
-            <li class="one-txt-cut">
+            <li class="one-txt-cut swiper-slide">
               <a href="#">智大前端黑马传xx期，毕业薪资3W5</a>
             </li>
-            <li class="one-txt-cut">
+            <li class="one-txt-cut swiper-slide">
               <a href="#">智大前端黑马传xx期，毕业薪资4W5</a>
             </li>
-            <li class="one-txt-cut">
+            <li class="one-txt-cut swiper-slide">
               <a href="#">智大前端黑马传xx期，毕业薪资5W5</a>
             </li>
-            <li class="one-txt-cut">
+            <li class="one-txt-cut swiper-slide">
               <a href="#">智大前端黑马传xx期，毕业薪资10W5</a>
-            </li>
-            <li class="one-txt-cut">
-              <a href="#"
-                >智大前端黑马传xx期，毕业薪资1W5,智大前端黑马传22期，毕业薪资1W5</a
-              >
             </li>
           </ul>
         </div>
@@ -248,43 +162,79 @@
           </ul>
         </div>
       </div>
-
-      <!--京东主会场-->
-      <div class="jd_major">
-        <ul>
-          <li>
-            <a href="#"><img src="images/item01.jpg" alt=""/></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/item02.jpg" alt=""/></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/item03.jpg" alt=""/></a>
-          </li>
-        </ul>
+      <!-- 京东楼层 -->
+      <div class="jd_floor">
+        <!-- 挖个坑 -->
       </div>
-
-      <!--京东商品-->
-      <div class="jd_product">
+      <!-- 京东footer -->
+      <div class="jd_footer">
         <ul>
-          <li>
-            <a href="#"><img src="images/major_1.jpg" alt=""/></a>
-            <a href="#"><img src="images/major_2.jpg" alt=""/></a>
-            <a href="#"><img src="images/major_3.jpg" alt=""/></a>
+          <li class="now">
+            <a href="index.html">
+              <span class="iconfont icon-shouye"></span>
+              <p>首页</p>
+            </a>
           </li>
           <li>
-            <a href="#"><img src="images/major_4.jpg" alt=""/></a>
-            <a href="#"><img src="images/major_5.jpg" alt=""/></a>
+            <a href="pages/category.html">
+              <span class="iconfont icon-fenlei"></span>
+              <p>分类</p>
+            </a>
           </li>
           <li>
-            <a href="#"><img src="images/major_6.jpg" alt=""/></a>
-            <a href="#"><img src="images/major_7.jpg" alt=""/></a>
+            <a href="pages/cart.html">
+              <span class="iconfont icon-gouwuche"></span>
+              <p>购物车</p>
+            </a>
+          </li>
+          <li>
+            <a href="pages/user.html">
+              <span class="iconfont icon-app_icons--"></span>
+              <p>个人中心</p>
+            </a>
           </li>
         </ul>
       </div>
     </div>
     <script src="lib/swiper/js/swiper.js"></script>
     <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/art-template/template-web.js"></script>
+    <script src="lib/bscroll/bscroll.js"></script>
     <script src="js/index.js"></script>
+    <script type="text/html" id="banner_tpl">
+      {{each list v i }}
+        <li class="swiper-slide">
+          <a href="{{v.url}}"><img src="{{v.image}}" alt=""/></a>
+        </li>
+      {{/each}}
+    </script>
+    <script type="text/html" id="nav_tpl">
+      {{each list v i }}
+        <li>
+          <a href="#">
+            <img src="{{v.image}}" alt="" />
+            <p>{{v.text}}</p>
+          </a>
+        </li>
+      {{/each}}
+    </script>
+    <script type="text/html" id="floor_tpl">
+      {{each list v i}}
+        <div class="jd_floor_item">
+          <div class="floor_title">
+            <img src="{{v.image}}" alt="" />
+          </div>
+          <div class="floor-content">
+            {{each v.detail item}}
+              <div class="item">
+                <p class="tit">{{item.title}}</p>
+                <p class="info">{{item.content}}</p>
+                <img src="{{item.image}}" alt="" />
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      {{/each}}
+    </script>
   </body>
 </html>

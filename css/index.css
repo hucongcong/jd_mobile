@@ -130,6 +130,7 @@ i {
   max-width: 640px;
   min-width: 320px;
   margin: 0 auto;
+  padding-bottom: 45px;
 }
 .jd_header {
   height: 40px;
@@ -176,6 +177,17 @@ i {
   position: absolute;
   top: 9px;
   left: 7px;
+}
+.jd_banner .pagination-item {
+  width: 6px;
+  height: 6px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+.jd_banner .pagination-item-active {
+  background-color: #fff;
 }
 .jd_nav {
   background-color: #f7f7f7;
@@ -325,4 +337,65 @@ i {
 }
 .jd_product li:first-child a {
   width: 33.33%;
+}
+.jd_floor {
+  background-color: #fff;
+}
+.jd_floor .floor_title {
+  height: 35px;
+  background-color: #f6f6f6;
+  width: 100%;
+}
+.jd_floor .floor_title img {
+  width: 350px;
+  margin: 0 auto;
+}
+.jd_floor .floor-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.jd_floor .floor-content .item {
+  border-right: 1px solid #f5f5f5;
+  width: 25%;
+  text-align: center;
+  padding: 5px 0;
+}
+.jd_floor .floor-content .item .tit {
+  font-size: 16px;
+  line-height: 20px;
+  background: linear-gradient(90deg, #ff2a2a, #f139d2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.jd_floor .floor-content .item img {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+}
+.jd_footer {
+  position: fixed;
+  height: 44px;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  width: 100%;
+  bottom: 0;
+  max-width: 640px;
+}
+.jd_footer li {
+  height: 44px;
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.jd_footer li span {
+  font-size: 18px;
+}
+.jd_footer li p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
+}
+.jd_footer li.now a {
+  color: #f23030;
 }
