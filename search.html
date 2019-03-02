@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>品优购-搜索页</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css" />
+  </head>
+  <body>
+    <div class="jd_container">
+      <!-- 头部 -->
+      <div class="jd_header">
+        <div class="left">
+          <a href="javascript:history.go(-1)">
+            <span class="iconfont icon-back"></span>
+          </a>
+        </div>
+        <div class="center">
+          <i class="jd_sprit"></i>
+          <input
+            type="text"
+            class="search_key"
+            value="电脑"
+            placeholder="电脑"
+          />
+        </div>
+        <div class="right">
+          <button class="search_button">搜索</button>
+        </div>
+      </div>
+      <div class="jd_main">
+        <div class="history"></div>
+        <div class="hot">
+          <div class="search_header">
+            <p>热门搜索</p>
+          </div>
+          <div class="search_content"></div>
+        </div>
+      </div>
+    </div>
+    <div class="jd_mask" style="display: none;">
+      <!-- 京东遮罩层 -->
+      <div class="toast">
+        <div class="toast-content">确定要清空吗？</div>
+        <div class="toast-btn">
+          <a class="no">取消</a>
+          <a class="yes">确定</a>
+        </div>
+      </div>
+    </div>
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/art-template/template-web.js"></script>
+    <script src="js/search.js"></script>
+    <script type="text/html" id="search_tpl">
+      {{if list.length > 0}}
+        <div class="search_header">
+          <p>最近搜索</p>
+          <i class="trash iconfont icon-trash"></i>
+        </div>
+        <div class="search_content">
+          {{each list v i}}
+            <span><a href="searchList.html?key={{v}}">{{v}}</a></span>
+          {{/each}}
+        </div>
+      {{/if}}
+    </script>
+    <script type="text/html" id="hot_tpl">
+      {{each list v i}}
+        <span><a href="searchList.html?key={{v}}">{{v}}</a></span>
+      {{/each}}
+    </script>
+  </body>
+</html>

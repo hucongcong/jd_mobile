@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>品优购-分类页</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/category.css" />
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css" />
+  </head>
+  <body>
+    <div class="jd_container">
+      <!-- 头部 -->
+      <div class="jd_header">
+        <div class="left">
+          <a href="javascript:history.go(-1)">
+            <span class="iconfont icon-back"></span>
+          </a>
+        </div>
+        <div class="center">
+          <i class="jd_sprit"></i>
+          <a href="search.html">
+            <input type="text" placeholder="上海黑马xx期"
+          /></a>
+        </div>
+        <div class="right">
+          <a href="javascript:history.go(-1)">
+            <span class="iconfont icon-more"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 主体 -->
+      <div class="jd_main">
+        <div class="jd_main_left">
+          <ul>
+            <!-- 挖个坑 -->
+          </ul>
+        </div>
+        <div class="jd_main_right">
+          <div class="brand_list">
+            <div class="brand_list_item">
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 京东footer -->
+      <div class="jd_footer">
+        <ul>
+          <li>
+            <a href="index.html">
+              <span class="iconfont icon-home"></span>
+              <p>首页</p>
+            </a>
+          </li>
+          <li class="now">
+            <a href="category.html">
+              <span class="iconfont icon-category"></span>
+              <p>分类</p>
+            </a>
+          </li>
+          <li>
+            <a href="cart.html">
+              <span class="iconfont icon-cart"></span>
+              <p>购物车</p>
+            </a>
+          </li>
+          <li>
+            <a href="user.html">
+              <span class="iconfont icon-user"></span>
+              <p>个人中心</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/bscroll/bscroll.js"></script>
+    <script src="lib/art-template/template-web.js"></script>
+    <script src="js/category.js"></script>
+    <script type="text/html" id="first_tpl">
+      {{each rows v i}}
+        <li data-id="{{v.id}}" class="{{i === 0 ? 'now': ''}}"><a href="#">{{v.categoryName}}</a></li>
+      {{/each}}
+    </script>
+    <script type="text/html" id="second_tpl">
+      {{if rows.length === 0}}
+        <div class="tips">该分类下没有更多的数据</div>
+      {{/if}}
+      {{each rows v i}}
+      <li>
+        <a href="#">
+          <img src="{{v.brandLogo}}" alt="" />
+
+          <span>{{v.brandName}}</span>
+        </a>
+      </li>
+      {{/each}}
+    </script>
+  </body>
+</html>

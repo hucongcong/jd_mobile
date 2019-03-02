@@ -1,0 +1,26 @@
+.jd_footer {
+  position: fixed;
+  height: 44px;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  width: 100%;
+  bottom: 0;
+  max-width: 640px;
+}
+.jd_footer li {
+  height: 44px;
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.jd_footer li span {
+  font-size: 18px;
+}
+.jd_footer li p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
+}
+.jd_footer li.now a {
+  color: #f23030;
+}

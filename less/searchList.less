@@ -1,0 +1,80 @@
+@import './base.less';
+@import './common.less';
+.jd_container {
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding-top: 45px;
+}
+
+.jd_header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  max-width: 640px;
+  height: 44px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  .left,
+  .right {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+  }
+  .right {
+    button {
+      padding: 4px;
+      background-color: #e93b3d;
+      color: #fff;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+  }
+  .center {
+    flex: 1;
+    position: relative;
+    input {
+      width: 100%;
+      height: 30px;
+      margin-top: 7px;
+      border-radius: 15px;
+      padding-left: 30px;
+      background-color: #eee;
+      color: #333;
+    }
+    i {
+      width: 21px;
+      height: 21px;
+      background-position: -59px -109px;
+      position: absolute;
+      top: 11px;
+      left: 7px;
+    }
+  }
+}
+.sort {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  padding: 0 20px;
+  li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    font-size: 12px;
+
+    i {
+      font-size: 12px;
+    }
+
+    &.now {
+      color: #f23030;
+    }
+  }
+}

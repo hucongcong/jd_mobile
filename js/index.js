@@ -23,7 +23,7 @@ $(window).scroll(function() {
     opacity = 0.9
   }
   $('.jd_header').css('backgroundColor', 'rgba(222, 24, 27, ' + opacity + ')')
-  console.log(opacity)
+  // console.log(opacity)
 })
 
 // 发送ajax请求，获取轮播图数据
@@ -100,7 +100,7 @@ function renderFloor() {
     url: 'http://localhost:3000/home/getFloorList',
     success: function(info) {
       if (info.status === 200) {
-        console.log(info)
+        // console.log(info)
         // 渲染轮播图数据
         var html = template('floor_tpl', info)
         $('.jd_floor').html(html)

@@ -1,0 +1,118 @@
+@import './base.less';
+@import './common.less';
+body,
+html {
+  height: 100%;
+}
+.jd_container {
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding-bottom: 45px;
+  padding-top: 45px;
+}
+
+.jd_header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  max-width: 640px;
+  height: 45px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  .left,
+  .right {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+  }
+
+  .center {
+    flex: 1;
+    position: relative;
+    input {
+      width: 100%;
+      height: 30px;
+      margin-top: 7px;
+      border-radius: 15px;
+      padding-left: 30px;
+      background-color: #eee;
+    }
+    i {
+      width: 21px;
+      height: 21px;
+      background-position: -59px -109px;
+      position: absolute;
+      top: 11px;
+      left: 7px;
+    }
+  }
+}
+
+.jd_main {
+  border-top: 1px solid #ccc;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  overflow: hidden;
+  &_left {
+    width: 85px;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    li {
+      height: 46px;
+      line-height: 46px;
+      background: #fff;
+      text-align: center;
+      position: relative;
+      background-color: #f8f8f8;
+
+      &.now {
+        background-color: #fff;
+        a {
+          color: #e93b3d;
+        }
+      }
+    }
+  }
+
+  &_right {
+    flex: 1;
+    overflow: hidden;
+    .brand_list {
+      overflow: hidden;
+      &_item {
+        margin: 19px 7px 0;
+        ul {
+          margin-top: 9px;
+          background-color: #fff;
+          padding: 7px 10px 0;
+          overflow: hidden;
+
+          li {
+            width: 33.33%;
+            float: left;
+            text-align: center;
+          }
+          img {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+          }
+          span {
+            display: block;
+            color: #333;
+            height: 35px;
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+  }
+}
