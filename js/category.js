@@ -1,9 +1,6 @@
 $(function() {
-  new BScroll('.jd_main_left', {
-    click: true
-  })
-  new BScroll('.jd_main_right')
-
+  var left = new IScroll('.jd_main_left')
+  var right = new IScroll('.jd_main_right')
   // 渲染一级分类
   $.ajax({
     type: 'get',
@@ -12,6 +9,7 @@ $(function() {
       // 使用模板引擎渲染页面
       let html = template('first_tpl', info)
       $('.jd_main_left ul').html(html)
+      left.refresh()
       // 渲染二级分类
       renderSecond(info.rows[0].id)
     }
@@ -27,20 +25,21 @@ $(function() {
     let id = $(this).data('id')
     renderSecond(id)
   })
-})
 
-function renderSecond(id) {
-  $.ajax({
-    type: 'get',
-    url: 'http://localhost:3000/category/querySecondCategory',
-    data: {
-      id: id
-    },
-    success: function(info) {
-      // console.log(info)
-      // 使用模板引擎渲染页面
-      let html = template('second_tpl', info)
-      $('.jd_main_right ul').html(html)
-    }
-  })
-}
+  function renderSecond(id) {
+    $.ajax({
+      type: 'get',
+      url: 'http://localhost:3000/category/querySecondCategory',
+      data: {
+        id: id
+      },
+      success: function(info) {
+        // console.log(info)
+        // 使用模板引擎渲染页面
+        let html = template('second_tpl', info)
+        $('.jd_main_right ul').html(html)
+        right.refresh()
+      }
+    })
+  }
+})

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>品优购-商品详情</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="lib/swiper/css/swiper.css" />
+    <link rel="stylesheet" href="css/product.css" />
+  </head>
+  <body>
+    <div class="jd_container">
+      <!-- 头部 -->
+      <div class="jd_header">
+        <div class="left">
+          <a href="javascript:history.go(-1)">
+            <span class="iconfont icon-back"></span>
+          </a>
+        </div>
+        <div class="center">
+          <ul>
+            <li class="now"><span>商品</span></li>
+            <li><span>评价</span></li>
+            <li><span>详情</span></li>
+            <li><span>推荐</span></li>
+          </ul>
+        </div>
+        <div class="right">
+          <a>
+            <span class="iconfont icon-more"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="product_info"></div>
+      <div class="jd_buy">
+        <a href="#" class="concat">
+          <i class="iconfont icon-concat"></i>
+          <p>联系客服</p>
+        </a>
+        <a href="#" class="go_shop">
+          <i class="iconfont icon-shop"></i>
+          <p>进店</p>
+        </a>
+        <a href="cart.html" class="go_cart">
+          <i class="iconfont icon-cart"></i>
+          <p>购物车</p>
+        </a>
+        <span class="add_cart">加入购物车</span>
+        <span class="buy_now">立即购买</span>
+      </div>
+    </div>
+
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/art-template/template-web.js"></script>
+    <script src="lib/swiper/js/swiper.js"></script>
+    <script src="js/product.js"></script>
+    <script type="text/html" id="tpl">
+      <div class="swiper-container">
+         <div class="swiper-wrapper">
+          {{each pic v i}}
+            <div class="swiper-slide">
+             <img
+               src="{{v.picAddr}}"
+               alt=""
+             />
+           </div>
+          {{/each}}
+         </div>
+         <!-- 如果需要分页器 -->
+         <div class="swiper-pagination"></div>
+       </div>
+       <div class="buy_area">
+         <!-- 商品名 -->
+         <div class="jd_product">
+           <div class="product_name">
+             {{proName}}
+             <div class="fav">
+               <i class="iconfont icon-xin"></i>
+               <p>关注</p>
+             </div>
+           </div>
+           <div class="product_desc">
+              {{proDesc}}
+           </div>
+           <div class="product_price">
+             <span class="price">￥{{price}}.00</span>
+             <span class="old_price">￥{{oldPrice}}.00</span>
+             <span class="cheaper_info">降价提醒</span>
+           </div>
+           <div class="product_baitiao">
+             <span class="title">白条</span>
+             <span class="info">白条支付12期息费6折</span>
+             <i class="iconfont icon-more"></i>
+           </div>
+
+           <div class="product_cuxiao">
+             <span class="title">促销</span>
+             <span class="info one-txt-cut"
+               >仅购买1件时享受单件价￥5699，超出数量以结算价为准</span
+             >
+             <i class="iconfont icon-more"></i>
+           </div>
+         </div>
+       </div>
+    </script>
+  </body>
+</html>

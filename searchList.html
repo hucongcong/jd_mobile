@@ -36,15 +36,15 @@
       </div>
       <div class="sort">
         <ul>
-          <li class="sort_item now">
+          <li class="sort_item">
             <span>上架时间</span>
             <i class="iconfont icon-arrow-up"></i>
           </li>
-          <li class="sort_item">
+          <li class="sort_item" data-type="price">
             <span>价格</span>
             <i class="iconfont icon-arrow-up"></i>
           </li>
-          <li class="sort_item">
+          <li class="sort_item" data-type="num">
             <span>库存</span>
             <i class="iconfont icon-arrow-up"></i>
           </li>
@@ -54,6 +54,47 @@
           </li>
         </ul>
       </div>
+      <div class="jd_main">
+        <div class="wrapper">
+          <div class="top_tips">下拉刷新</div>
+          <div class="product_list"></div>
+          <div class="bottom_tips">加载更多</div>
+        </div>
+      </div>
     </div>
+
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/bscroll/bscroll.js"></script>
+    <script src="lib/art-template/template-web.js"></script>
+    <script src="js/searchList.js"></script>
+    <script type="text/html" id="item_tpl">
+      {{each data v i}}
+      <div class="item">
+        <div class="item_left">
+          <img
+            src="{{v.pic[0].picAddr}}"
+            alt=""
+          />
+        </div>
+        <div class="item_right">
+          <div class="product_name txt-cut">
+            <a href="product.html?id={{v.id}}">{{v.proName}}</a>
+          </div>
+          <div class="product_price">
+            <strong>￥{{v.price}}</strong>
+            <del>￥{{v.oldPrice}}</del>
+          </div>
+          <div class="product_comment">
+            <i></i>
+            <span>13万条评价 好评率99%</span>
+          </div>
+          <div class="product_shop">
+            <span>联想电脑京东自营旗舰店></span>
+            <i></i>
+          </div>
+        </div>
+      </div>
+       {{/each}}
+    </script>
   </body>
 </html>
