@@ -7,7 +7,7 @@ $(function() {
     url: 'http://localhost:3000/category/queryTopCategory',
     success: function(info) {
       // 使用模板引擎渲染页面
-      let html = template('first_tpl', info)
+      var html = template('first_tpl', info)
       $('.jd_main_left ul').html(html)
       left.refresh()
       // 渲染二级分类
@@ -22,7 +22,7 @@ $(function() {
       .addClass('now')
       .siblings()
       .removeClass('now')
-    let id = $(this).data('id')
+    var id = $(this).data('id')
     renderSecond(id)
   })
 
@@ -36,7 +36,7 @@ $(function() {
       success: function(info) {
         // console.log(info)
         // 使用模板引擎渲染页面
-        let html = template('second_tpl', info)
+        var html = template('second_tpl', info)
         $('.jd_main_right ul').html(html)
         right.refresh()
       }

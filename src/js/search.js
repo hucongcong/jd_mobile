@@ -9,7 +9,7 @@ $(function() {
     // 把关键字加入本地缓存中
     var history = getHistory()
     // 如果记录中已经存在这个，应该删除
-    let index = history.indexOf(key)
+    var index = history.indexOf(key)
     if (index != -1) {
       history.splice(index, 1)
     }
@@ -51,7 +51,7 @@ $(function() {
     type: 'get',
     url: 'http://localhost:3000/search/getHotSearch',
     success: function(info) {
-      let html = template('hot_tpl', info)
+      var html = template('hot_tpl', info)
       $('.hot .search_content').html(html)
     }
   })
@@ -66,7 +66,7 @@ function setHistory(data) {
 }
 
 function render() {
-  let history = getHistory()
-  let html = template('search_tpl', { list: history })
+  var history = getHistory()
+  var html = template('search_tpl', { list: history })
   $('.history').html(html)
 }

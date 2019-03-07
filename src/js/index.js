@@ -15,8 +15,8 @@ $(function() {
 })
 // 滚动改变透明度
 $(window).scroll(function() {
-  let scrollTop = $(this).scrollTop()
-  let opacity = 0
+  var scrollTop = $(this).scrollTop()
+  var opacity = 0
   if (scrollTop < 500) {
     opacity = (scrollTop / 500) * 0.9
   } else {
@@ -48,8 +48,8 @@ function initSwiper() {
     // 如果需要分页器
     pagination: {
       el: '.swiper-pagination',
-      bulletClass: 'pagination-item',
-      bulletActiveClass: 'pagination-item-active'
+      bulvarClass: 'pagination-item',
+      bulvarActiveClass: 'pagination-item-active'
     },
     autoplay: {
       delay: 3000,
@@ -85,11 +85,11 @@ function initNewsSwiper() {
 // 初始化秒杀区域滚动功能
 function initSecSkill() {
   // 计算并设置ul的宽度
-  let liWidth = $('.seckill_content li').width()
-  let length = $('.seckill_content li').length
+  var liWidth = $('.seckill_content li').width()
+  var length = $('.seckill_content li').length
   $('.seckill_content ul').width(liWidth * length)
   // 初始化区域滚动
-  let content = document.querySelector('.seckill_content')
+  var content = document.querySelector('.seckill_content')
   new BScroll(content, {
     scrollX: true,
     scrollY: false

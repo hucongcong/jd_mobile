@@ -1,14 +1,14 @@
 $(function() {
   // 获取地址栏参数
-  let page = 1
-  let pageSize = 4
-  let hasMore = true
-  let href = decodeURI(location.href)
-  let key = href.split('=')[1]
+  var page = 1
+  var pageSize = 4
+  var hasMore = true
+  var href = decodeURI(location.href)
+  var key = href.split('=')[1]
   $('.search_key').val(key)
   render(function(info) {
     total = info.total
-    let html = template('item_tpl', info)
+    var html = template('item_tpl', info)
     $('.product_list').html(html)
   })
 
@@ -33,7 +33,7 @@ $(function() {
     // 只要是下拉刷新，就是重新加载第一页的数据
     page = 1
     render(function(info) {
-      let html = template('item_tpl', info)
+      var html = template('item_tpl', info)
       $('.product_list').html(html)
       bs.refresh()
       bs.finishPullDown()
@@ -57,7 +57,7 @@ $(function() {
     $('.bottom_tips').html('数据正在加载中...')
     page++
     render(function(info) {
-      let html = template('item_tpl', info)
+      var html = template('item_tpl', info)
       $('.product_list').append(html)
       bs.refresh()
       bs.finishPullUp()
@@ -94,7 +94,7 @@ $(function() {
 
   // 发送ajax请求，渲染数据的功能
   function render(callback) {
-    let params = {
+    var params = {
       page: page,
       pageSize: pageSize,
       productName: key,

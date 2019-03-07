@@ -1,6 +1,6 @@
 $(function() {
   // 获取地址id
-  let id = decodeURI(location.href).split('=')[1]
+  var id = decodeURI(location.href).split('=')[1]
   // 渲染详情页
   $.ajax({
     type: 'get',
@@ -10,7 +10,7 @@ $(function() {
     },
     success: function(info) {
       // console.log(info)
-      let html = template('tpl', info)
+      var html = template('tpl', info)
       $('.product_info').html(html)
       initSwiper()
     }
@@ -20,6 +20,20 @@ $(function() {
   $('.add_cart').on('click', function() {
     console.log('哈哈')
     // 发送ajax请求，添加购物车
+    $.ajax({
+      type: 'post',
+      url: 'http://localhost:3000/cart/addCart',
+      data: {
+        productId: id,
+        num: 1
+      },
+      success: function(info) {
+        if (info.error === 400) {
+          // 没有登录，跳转到登录页面
+          location.href = 'login.html'
+        }
+      }
+    })
   })
 
   function initSwiper() {
