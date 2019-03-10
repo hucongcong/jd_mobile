@@ -1,0 +1,36 @@
+@import './login.less';
+.jd_main {
+  .login_form {
+    .input_wrapper {
+      position: relative;
+      padding-right: 120px;
+      input {
+        height: 30px;
+        width: 100%;
+        color: #222;
+        font-size: 16px;
+      } 
+      button {
+        background-color:lightblue;
+        width: 120px;
+        position: absolute;
+        height: 30px;
+        top: 8px;
+        line-height: 30px;
+        right: 0;
+        font-size: 14px;
+        color: #000;
+        color: #fff;
+
+        &.disabled {
+          background-color: #ccc;
+        }
+      }
+    }
+  }
+}
+
+.layui-layer {
+  top: auto !important;
+  bottom: 30px;
+}

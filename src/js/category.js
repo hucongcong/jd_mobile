@@ -4,7 +4,7 @@ $(function() {
   // 渲染一级分类
   $.ajax({
     type: 'get',
-    url: 'http://localhost:3000/category/queryTopCategory',
+    url: '/api/category/queryTopCategory',
     success: function(info) {
       // 使用模板引擎渲染页面
       var html = template('first_tpl', info)
@@ -29,7 +29,7 @@ $(function() {
   function renderSecond(id) {
     $.ajax({
       type: 'get',
-      url: 'http://localhost:3000/category/querySecondCategory',
+      url: '/api/category/querySecondCategory',
       data: {
         id: id
       },

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css" />
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css" />
+  </head>
+  <body>
+    <div class="jd_container">
+      <div class="jd_header">
+        <div class="left">
+          <a href="javascript:history.go(-1)">
+            <span class="iconfont icon-back"></span>
+          </a>
+        </div>
+        <div class="center">
+          <h3>京东注册</h3>
+        </div>
+        <div class="right"></div>
+      </div>
+
+      <div class="jd_main">
+        <div class="login_form">
+          <div class="input_wrapper">
+            <input
+              type="text"
+              class="username"
+              placeholder="请输入用户名"
+            />
+          </div>
+          <div class="input_wrapper">
+            <input type="password" class="password" placeholder="请输入密码" />
+            <i class="iconfont icon-eye-close check_password"></i>
+          </div>
+          <div class="input_wrapper">
+            <input type="password" class="repassword" placeholder="请确认密码" />
+            <i class="iconfont icon-eye-close check_password"></i>
+          </div>
+          <div class="input_wrapper">
+            <input type="text" class="phone" placeholder="请输入手机号" />
+          </div>
+          <div class="input_wrapper">
+            <input type="text" class="vcode" placeholder="请输入验证码" />
+            <button class="get_code">获取验证码</button>
+          </div>
+          <a href="javascript:;" class="login_register login_btn">注册</a>
+          <a href="login.html" class="login_one_step">一键登录</a>
+        </div>
+      </div>
+    </div>
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/layer/layer.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>

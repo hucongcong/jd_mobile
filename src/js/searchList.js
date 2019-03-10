@@ -113,7 +113,7 @@ $(function() {
 
     $.ajax({
       type: 'get',
-      url: 'http://localhost:3000/product/queryProduct',
+      url: '/api/product/queryProduct',
       data: params,
       success: function(info) {
         setTimeout(function() {

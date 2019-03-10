@@ -29,7 +29,7 @@ $(window).scroll(function() {
 // 发送ajax请求，获取轮播图数据
 function renderBanner() {
   $.ajax({
-    url: 'http://localhost:3000/home/getBannerList',
+    url: '/api/home/getBannerList',
     success: function(info) {
       if (info.status === 200) {
         // 渲染轮播图数据
@@ -61,7 +61,7 @@ function initSwiper() {
 // 发送ajax请求，获取导航数据
 function renderNav() {
   $.ajax({
-    url: 'http://localhost:3000/home/getNavList',
+    url: '/api/home/getNavList',
     success: function(info) {
       if (info.status === 200) {
         // 渲染轮播图数据
@@ -97,7 +97,7 @@ function initSecSkill() {
 }
 function renderFloor() {
   $.ajax({
-    url: 'http://localhost:3000/home/getFloorList',
+    url: '/api/home/getFloorList',
     success: function(info) {
       if (info.status === 200) {
         // console.log(info)

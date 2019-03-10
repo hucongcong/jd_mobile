@@ -49,7 +49,7 @@ $(function() {
   // 发送ajax请求，获取热门搜索内容
   $.ajax({
     type: 'get',
-    url: 'http://localhost:3000/search/getHotSearch',
+    url: '/api/search/getHotSearch',
     success: function(info) {
       var html = template('hot_tpl', info)
       $('.hot .search_content').html(html)

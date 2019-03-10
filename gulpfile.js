@@ -7,6 +7,7 @@ var minifyCss = require('gulp-minify-css')
 var htmlmin = require('gulp-htmlmin')
 var imagemin = require('gulp-imagemin')
 var connect = require('gulp-connect')
+var proxy = require('http-proxy-middleware')
 // 文件读取
 // gulp.task方法定义一个任务
 // 参数1：任务名
@@ -17,6 +18,10 @@ gulp.task('copy', function() {
   // 通过pipe 管道对文件进行处理
   // gulp.dest: 把文件输出到指定目录
   return gulp.src('./src/lib/**/*.*').pipe(gulp.dest('./dist/lib'))
+})
+
+gulp.task('ico', function() {
+  return gulp.src('./src/favicon.ico').pipe(gulp.dest('./dist/'))
 })
 
 // 处理js文件并且压缩
@@ -95,10 +100,21 @@ gulp.task('connect', function() {
   return connect.server({
     root: 'dist',
     port: 8080,
-    livereload: true
+    livereload: true,
+    middleware: function(connect, opt) {
+      return [
+        proxy('/api', {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
+          pathRewrite: {
+            '^/api': '/'
+          }
+        })
+      ]
+    }
   })
 })
-gulp.task('init', gulp.parallel('html', 'js', 'css', 'less', 'img', 'copy'))
+gulp.task('init', gulp.parallel('html', 'js', 'css', 'less', 'img', 'copy', 'ico'))
 gulp.task(
   'default',
   gulp.series('clean', 'init', gulp.parallel('watch', 'connect'))
